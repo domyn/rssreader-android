@@ -53,6 +53,10 @@ android {
         isAbortOnError = true
         isCheckGeneratedSources = true
     }
+
+    packagingOptions {
+        exclude("META-INF/**")
+    }
 }
 
 dependencies {
