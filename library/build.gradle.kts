@@ -8,7 +8,7 @@ val artifactId by extra("rssreader-android")
 
 val versionMajor = 1
 val versionMinor = 0
-val versionPatch = 5
+val versionPatch = 8
 val versionCode = 1000 * versionMajor + 100 * versionMinor + versionPatch
 val versionName = "$versionMajor.$versionMinor.$versionPatch"
 
@@ -72,7 +72,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "1.3.8")
     implementation("org.jetbrains.kotlinx", "kotlinx-coroutines-android", "1.3.8")
     api("pl.domyno", "rssparser", "1.0.0")
-    api("com.squareup.okhttp3", "okhttp", "4.+")
+    api("com.squareup.okhttp3", "okhttp", "3.+")
 
 
     testImplementation("junit", "junit", "4.12")

@@ -38,11 +38,11 @@ class RssReader(private val parser: FeedParser,
 
                     override fun onResponse(call: Call, response: Response) {
                         response.use { _ ->
-                            if (response.isSuccessful && response.body != null)
-                                 it.resume(parser.parse(response.body!!.string()))
+                            if (response.isSuccessful && response.body() != null)
+                                 it.resume(parser.parse(response.body()!!.string()))
                             else
                                 it.resumeWithException(
-                                        IOException("Feed load error, code ${response.code}, body ${if (response.body == null) "was" else "was not"} null")
+                                        IOException("Feed load error, code ${response.code()}, body ${if (response.body() == null) "was" else "was not"} null")
                                 )
                         }
                     }
