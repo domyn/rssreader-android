@@ -8,7 +8,7 @@ val artifactId by extra("rssreader-android")
 
 val versionMajor = 1
 val versionMinor = 0
-val versionPatch = 3
+val versionPatch = 4
 val versionCode = 1000 * versionMajor + 100 * versionMinor + versionPatch
 val versionName = "$versionMajor.$versionMinor.$versionPatch"
 
@@ -43,6 +43,7 @@ android {
         targetSdkVersion(29)
         versionCode = versionCode
         versionName = versionName
+        setConsumerProguardFiles(listOf("proguard-rules.pro"))
 
         testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
     }
