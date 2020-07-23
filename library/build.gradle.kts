@@ -8,7 +8,7 @@ val artifactId by extra("rssreader-android")
 
 val versionMajor = 1
 val versionMinor = 0
-val versionPatch = 8
+val versionPatch = 9
 val versionCode = 1000 * versionMajor + 100 * versionMinor + versionPatch
 val versionName = "$versionMajor.$versionMinor.$versionPatch"
 
